@@ -1,6 +1,9 @@
 package com.cursed.Cursed.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import java.util.Set;
 
 @Entity
@@ -11,9 +14,13 @@ public class User {
     @Column(name = "id")
     private int id;
 
+    @NotEmpty(message = "Username shouldn't be empty.")
+    @Size(min = 5, max = 15, message = "> 2 and < 15")
     @Column(name = "username")
     private String username;
 
+    @Size(min = 2, max = 15, message = "> 2 and < 15")
+    @NotEmpty(message = "Username shouldn't be empty.")
     @Column(name = "password")
     private String password;
 

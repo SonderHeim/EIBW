@@ -35,8 +35,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/reg", "/auth", "/index", "/gallery", "/review", "/gallery-georgins", "/gallery-roses", "/gallery-lutiks", "/about").permitAll()
-                .antMatchers("/review/add", "/AboutRoses", "/AboutGeorgins", "/AboutLutiks").authenticated()
+                .antMatchers("/reg", "/auth", "/index", "/gallery", "/review", "/gallery-georgins", "/gallery-roses", "/gallery-lutiks", "/about", "/people","/people/1").permitAll()
+                .antMatchers().authenticated()
                 .anyRequest().authenticated()
                 .and()
                 .csrf().disable()
@@ -63,38 +63,3 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 }
-  /* protected void configure(HttpSecurity http) throws Exception {
-        http
-                .authorizeRequests()
-                .antMatchers("/reg", "/auth", "/index").permitAll()
-                .antMatchers("/review").authenticated()
-                .anyRequest().authenticated()
-                .and()
-                .formLogin()
-                .loginPage("/auth")
-                .permitAll()
-                .and()
-                .rememberMe()
-                .and()
-                .logout()w
-                .permitAll();
-    }
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-                .authorizeRequests()
-                .antMatchers("/reg", "/auth", "/index", "/about").permitAll()
-                .antMatchers("/review").authenticated()
-                .anyRequest().authenticated()
-                .and()
-                .formLogin()
-                .loginPage("/auth")
-                .loginProcessingUrl("/a")
-                .defaultSuccessUrl("/homepage.html", true)
-                .permitAll()
-                .and()
-                .rememberMe()
-                .and()
-                .logout()
-                .permitAll();
-    }
-   */

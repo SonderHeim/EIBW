@@ -38,12 +38,15 @@
   </div>
 </nav>
 <div style="padding-top: 310px"></div>
+
 <h1 style="padding-left: 2%; color: white"> Регистрация </h1>
 <div style="padding-top: 20px;"></div>
 <div style="margin-left: 47%;">
   <form th:action="@{/reg}" th:method="post" th:object="${user}">
     <div><label><input type="text" placeholder="Введите ваш логин" th:field="*{username}"/> </label></div>
+    <div style="color: red" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"> Name error </div>
     <div style="margin-top: 10px"><label><input placeholder="Введите ваш пароль" type="password" th:field="*{password}"> </label></div>
+    <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}"> Password error </div>
     <div style="margin-top: 10px; margin-left: 40px"><input type="submit" value="Регистрация"/></div>
   </form>
 </div>
