@@ -1,4 +1,4 @@
-package com.cursed.Cursed.repository;
+package com.cursed.Cursed.repositories;
 
 import com.cursed.Cursed.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;

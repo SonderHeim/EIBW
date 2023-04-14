@@ -1,6 +1,6 @@
 package com.cursed.Cursed.models;
 
-import com.cursed.Cursed.repository.UserRepository;
+import com.cursed.Cursed.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

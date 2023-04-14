@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:each="patient : ${patients}" style="background-color: #2d4d6f; width: 60%; height: 100%; margin:0 auto;">
+    <a href="/patients/add">Добавить!</a>
+    <br>
+    <a th:href="@{/patients/{id}(id=${patient.getId()})}"
+       th:text="${patient.getName()} + ' age: ' + ${patient.getAge()}"></a>
+</div>
+</body>
+</html>

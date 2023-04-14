@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+  <form action="/patients/add" method="POST">
+    <div class="container mt-5">
+
+      <input type="text" name="firstName" placeholder="Введите имя" class="form-control">
+      <div style="padding-top: 5px"></div>
+
+      <input type="text" name="secondName" placeholder="Введите фамилию" class="form-control">
+      <div style="padding-top: 5px"></div>
+
+      <input type="text" name="thirdName" placeholder="Введите отчество" class="form-control">
+      <div style="padding-top: 5px"></div>
+
+      <input type="text" name="gender" placeholder="Введите пол" class="form-control">
+      <div style="padding-top: 5px"></div>
+
+      <input type="text" name="birthDate" placeholder="Введите дату рождения" class="form-control">
+      <div style="padding-top: 5px"></div>
+
+      <input type="text" name="admissionDate" placeholder="Введите дату постувления" class="form-control">
+      <div style="padding-top: 5px"></div>
+      <div style="padding-left: 46%; margin-top: 10px"> <button type="submit"> Добавить человека </button> </div>
+    </div>
+    <div style="padding-top: 5px"></div>
+  </form>
+<!--  <h1>Add Patient</h1>-->
+<!--  <form action="#" th:action="@{/patients}" th:object="${patient}" method="post">-->
+<!--    <p>-->
+<!--      <label for="firstName">First Name:</label>-->
+<!--      <input type="text" id="firstName" th:field="*{firstName}">-->
+<!--    </p>-->
+<!--    <p>-->
+<!--      <label for="secondName">Second Name:</label>-->
+<!--      <input type="text" id="secondName" th:field="*{secondName}">-->
+<!--    </p>-->
+<!--    <p>-->
+<!--      <label for="thirdName">Third Name:</label>-->
+<!--      <input type="text" id="thirdName" th:field="*{thirdName}">-->
+<!--    </p>-->
+<!--    <p>-->
+<!--      <label for="birthDate">Birth Date:</label>-->
+<!--      <input type="text" id="birthDate" th:field="*{birthDate}">-->
+<!--    </p>-->
+<!--    <p>-->
+<!--      <label for="gender">Gender:</label>-->
+<!--      <input type="text" id="gender" th:field="*{gender}">-->
+<!--    </p>-->
+<!--    <p>-->
+<!--      <label for="admissionDate">Admission Date:</label>-->
+<!--      <input type="text" id="admissionDate" th:field="*{admissionDate}">-->
+<!--    </p>-->
+<!--    <button type="submit">Add Patient</button>-->
+<!--  </form>-->
+</div>
+</body>
+</html>

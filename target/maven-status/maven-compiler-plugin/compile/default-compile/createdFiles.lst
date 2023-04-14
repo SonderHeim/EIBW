@@ -1,0 +1,10 @@
+com\cursed\Cursed\services\PatientsService.class
+com\cursed\Cursed\models\Role.class
+com\cursed\Cursed\models\User.class
+com\cursed\Cursed\models\UserAuth.class
+com\cursed\Cursed\repositories\PatientsRepository.class
+com\cursed\Cursed\CursedApplication.class
+com\cursed\Cursed\controllers\PatientsController.class
+com\cursed\Cursed\controllers\MainPageController.class
+com\cursed\Cursed\repositories\UserRepository.class
+com\cursed\Cursed\models\Patient.class
