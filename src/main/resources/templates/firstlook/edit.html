@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" th:action="@{/firstlook/{fl_id}(fl_id=${firstLook.getFl_id()})}" th:object="${firstLook}">
+    <label for="name">Введите дату обследования </label>
+    <input type="text" th:field="*{fl_data}" id="name"/>
+    <br/>
+
+    <label for="age">Введите время обследования </label>
+    <input type="text" th:field="*{fl_time}" id="age"/>
+    <br/>
+
+    <label for="email">Введите жалобы: </label>
+    <textarea type="text" rows="10" cols="100" th:field="*{complaints}" id="email"/>
+    <br/>
+
+    <label> Введите Анемниз заболевания: </label>
+    <input type="text" th:field="*{anamnesis_dis}"/>
+    <br/>
+
+    <label> Введите Анемниз жизни </label>
+    <input type="text" th:field="*{anamnesis_life}"/>
+    <br/>
+
+    <label> Введите Физиологическое исследование </label>
+    <input type="text" th:field="*{phisical_research}"/>
+    <br/>
+
+<!--    <label for="email">Введите дату поступления: </label>-->
+<!--    <input type="text" th:field="*{admissionDate}" id="email"/>-->
+<!--    <br/>-->
+
+    <input type="submit" value="Update!"/>
+</form>
+</body>
+</html>

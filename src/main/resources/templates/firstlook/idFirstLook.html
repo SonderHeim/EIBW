@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="box4">
+    <h1 th:text="${'Запись номер : ' + firstLook.getFl_id()}"></h1>
+    <!--  <p th:text="${firstLook.getFl_id()}"></p>-->
+    <h1 th:text="${firstLook.getFl_data()}"></h1>
+    <h1><a th:text="${firstLook.getFl_time()}" ></a> </h1>
+    <!--    th:href="@{/patients/{id}(id=${patient.getId()})}"-->
+    <h1 th:text="${firstLook.getComplaints()}"></h1>
+    <h1 th:text="${firstLook.getAnamnesis_dis()}"></h1>
+    <h1 th:text="${firstLook.getAnamnesis_life()}"></h1>
+    <h1 th:text="${firstLook.getPhisical_research()}"></h1>
+    <h1 th:text="${firstLook.getOphthalmological_status()}"></h1>
+    <h1 th:text="${firstLook.getBasis_dis()}"></h1>
+    <h1 th:text="${firstLook.getHard_basis_dis()}"></h1>
+    <h1 th:text="${firstLook.getOutside_dis()}"></h1>
+    <h1 th:text="${firstLook.getWith_dis()}"></h1>
+    <h1 th:text="${firstLook.getAdditional_information()}"></h1>
+    <h1 th:text="${firstLook.getReason_dis()}"></h1>
+    <h1 th:text="${firstLook.getTreatment()}"></h1>
+    <h1 th:text="${firstLook.getInterventions()}"></h1>
+    <h1 th:text="${firstLook.getPlan_obsl()}"></h1>
+    <h1 th:text="${firstLook.getPlan_heal()}"></h1>
+    <form th:method="DELETE" th:action="@{/firstlook/delete/{fl_id}(fl_id=${firstLook.getFl_id()})}">
+        <input type="submit" value="Delete"/>
+    </form>
+    <a th:href="@{/firstlook/{fl_id}/edit(fl_id=${firstLook.getFl_id()})}">Edit</a>
+</div>
+
+</body>
+</html>

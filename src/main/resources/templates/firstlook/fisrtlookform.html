@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <link th:href="@{/css/home.css}" rel="stylesheet" />
+  <title>Add First Look Details</title>
+</head>
+<body>
+<h1>Add First Look Details</h1>
+<div class="box4" th:each="firstLook : ${firstLooks}">
+  <a th:text="${'Запись номер : ' + firstLook.getFl_id()}" th:href="@{/firstlook/{fl_id}(fl_id=${firstLook.getFl_id()})}"> </a>
+<!--  <p th:text="${firstLook.getFl_id()}"></p>-->
+  <h1 th:text="${firstLook.getFl_data()}"></h1>
+  <h1><a th:text="${firstLook.getFl_time()}" ></a> </h1>
+<!--    th:href="@{/patients/{id}(id=${patient.getId()})}"-->
+  <h1 th:text="${firstLook.getComplaints()}"></h1>
+  <h1 th:text="${firstLook.getAnamnesis_dis()}"></h1>
+  <h1 th:text="${firstLook.getAnamnesis_life()}"></h1>
+  <h1 th:text="${firstLook.getPhisical_research()}"></h1>
+  <h1 th:text="${firstLook.getOphthalmological_status()}"></h1>
+  <h1 th:text="${firstLook.getBasis_dis()}"></h1>
+  <h1 th:text="${firstLook.getHard_basis_dis()}"></h1>
+  <h1 th:text="${firstLook.getOutside_dis()}"></h1>
+  <h1 th:text="${firstLook.getWith_dis()}"></h1>
+  <h1 th:text="${firstLook.getAdditional_information()}"></h1>
+  <h1 th:text="${firstLook.getReason_dis()}"></h1>
+  <h1 th:text="${firstLook.getTreatment()}"></h1>
+  <h1 th:text="${firstLook.getInterventions()}"></h1>
+  <h1 th:text="${firstLook.getPlan_obsl()}"></h1>
+  <h1 th:text="${firstLook.getPlan_heal()}"></h1>
+</div>
+</body>
+</html>

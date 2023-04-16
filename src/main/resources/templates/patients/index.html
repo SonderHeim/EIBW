@@ -12,20 +12,20 @@
 <body style="background-color: #2d4d6f">
 <nav class="navbar navbar-expand-lg" style="background-color: #243f5c">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#" style="color: white">Цветочный магазин</a>
+    <a class="navbar-brand" href="#" style="color: white">ЭИБ</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/index" style="color: white"> Главная страница </a>
+          <a class="nav-link active" aria-current="page" href="/" style="color: white"> Главная страница </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/patients" style="color: white"> Люди </a>
+          <a class="nav-link active" aria-current="page" href="/" style="color: white"> Люди </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/gallery" style="color: white"> Галерея </a>
+          <a class="nav-link active" aria-current="page" href="/firstlook" style="color: white"> Первичные осмотры </a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/review" style="color: white"> Отзывы </a>
@@ -40,33 +40,40 @@
     </div>
   </div>
 </nav>
-<div th:each="patient : ${patients}" style="background-color: #2d4d6f; width: 60%; height: 100%; margin:0 auto;">
-  <br>
-  <a th:href="@{/patients/{id}(id=${patient.getId()})}"
-     th:text="${patient.getFirstName()} + ' г.р: ' + ${patient.getBirthDate()}"></a>
-</div>
+<!--<div th:each="patient : ${patients}" style="background-color: #2d4d6f; width: 60%; height: 100%; margin:0 auto;">-->
+<!--  <br>-->
+<!--  <a th:href="@{/patients/{id}(id=${patient.getId()})}"-->
+<!--     th:text="${patient.getFirstName()} + ' г.р: ' + ${patient.getBirthDate()}"></a>-->
+<!--</div>-->
+<input type="text" name="email" value="example@email.com example@email.com example@email.com example@email.com">
+
 <a href="/patients/add">Добавить!</a>
 <div style="margin-top: 6%"></div>
-<h1>List of Patients</h1>
+<h1>Patients List</h1>
 <table>
   <thead>
   <tr>
+    <th>ID</th>
     <th>First Name</th>
-    <th>Last Name</th>
+    <th>Second Name</th>
+    <th>Third Name</th>
     <th>Birth Date</th>
     <th>Gender</th>
-    <th>Date of Admission</th>
+    <th>Admission Date</th>
   </tr>
   </thead>
   <tbody>
   <tr th:each="patient : ${patients}">
+    <td th:text="${patient.getId()}"></td>
     <td th:text="${patient.getFirstName()}"></td>
-    <td th:text="${patient.getSecondName()}"></td>
+    <td><a th:text="${patient.getSecondName()}" th:href="@{/patients/{id}(id=${patient.getId()})}"></a> </td>
     <td th:text="${patient.getThirdName()}"></td>
+    <td th:text="${patient.getBirthDate()}"></td>
     <td th:text="${patient.getGender()}"></td>
     <td th:text="${patient.getAdmissionDate()}"></td>
   </tr>
   </tbody>
+</table>
 </table>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

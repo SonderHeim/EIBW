@@ -7,15 +7,27 @@
 <body>
 <form method="POST" th:action="@{/patients/{id}(id=${patient.getId()})}" th:object="${patient}">
   <label for="name">Введите имя: </label>
-  <input type="text" th:field="*{name}" id="name"/>
+  <input type="text" th:field="*{firstName}" id="name"/>
   <br/>
 
-  <label for="age">Enter age: </label>
-  <input type="text" th:field="*{age}" id="age"/>
+  <label for="age">Введите фамилию: </label>
+  <input type="text" th:field="*{secondName}" id="age"/>
   <br/>
 
-  <label for="email">Enter email: </label>
-  <input type="text" th:field="*{email}" id="email"/>
+  <label for="email">Введите отчество: </label>
+  <input type="text" th:field="*{thirdName}" id="email"/>
+  <br/>
+
+  <label for="email">Введите пол: </label>
+  <input type="text" th:field="*{gender}" id="email"/>
+  <br/>
+
+  <label for="email">Введите дату рождения: </label>
+  <input type="text" th:field="*{birthDate}" id="email"/>
+  <br/>
+
+  <label for="email">Введите дату поступления: </label>
+  <input type="text" th:field="*{admissionDate}" id="email"/>
   <br/>
 
   <input type="submit" value="Update!"/>

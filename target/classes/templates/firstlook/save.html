@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Add First Look Details</title>
+  <!-- Подключаем Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+  <h1 class="mt-5 mb-3">Add First Look Details</h1>
+  <form action="#" th:action="@{/firstlook/add}" th:object="${firstLook}" method="post">
+    <div class="form-group">
+      <label for="fl_data">Date:</label>
+      <input type="date" class="form-control" id="fl_data" name="fl_data">
+    </div>
+    <div class="form-group">
+      <label for="fl_Time">Time:</label>
+      <input type="time" class="form-control" id="fl_Time" name="fl_time">
+    </div>
+    <div class="form-group">
+      <label for="Complaints">Complaints:</label>
+      <textarea class="form-control" id="Complaints" rows="5" cols="50" name="Complaints">
+          Аллергологический анамнез – отрицает.
+Эпидемический анамнез: в течение последних 14 дней в эпидемически неблагополучных странах и регионах не был. Наличие близких контактов с больными или лицами, подозрительными на коронавирусную инфекцию COVID -19, контактов с лицами, находившимися под наблюдением в связи с подозрением на коронавирус и лицами, у которых подтвержден диагноз COVID- 19, отрицает.
+Перенесенные заболевания и оперативные вмешательства:
+Наследственность не отягощена.
+Применяемые препараты:
+Листок нетрудоспособности на руках нет, не нуждается.
+      </textarea>
+    </div>
+    <div class="form-group">
+      <label for="anamnesis_dis">Anamnesis of the disease:</label>
+      <textarea class="form-control" id="anamnesis_dis" name="anamnesis_dis"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="anamnesis_dis">Anamnesis of the life:</label>
+      <textarea class="form-control" name="anamnesis_life"></textarea>
+    </div>
+      <div class="form-group">
+          <label>phisical_research</label>
+          <textarea class="form-control" name="phisical_research"></textarea>
+      </div>
+      <div class="form-group">
+          <label>ophthalmological_status:</label>
+          <textarea class="form-control" name="ophthalmological_status"></textarea>
+      </div>
+      <div class="form-group">
+          <label>basis_dis:</label>
+          <textarea class="form-control" name="basis_dis"> код по МКБ   </textarea>
+      </div>
+      <div class="form-group">
+          <label>hard_basis_dis:</label>
+          <textarea class="form-control" name="hard_basis_dis"> код по МКБ    </textarea>
+      </div>
+      <div class="form-group">
+          <label>outside_dis:</label>
+          <textarea class="form-control" name="outside_dis">код по МКБ   </textarea>
+      </div>
+      <div class="form-group">
+          <label>with_dis:</label>
+          <textarea class="form-control" name="with_dis">код по МКБ</textarea>
+      </div>
+      <div class="form-group">
+          <label>additional_information:</label>
+          <textarea class="form-control" name="additional_information"></textarea>
+      </div>
+      <div class="form-group">
+          <label>reason_dis:</label>
+          <textarea class="form-control" name="reason_dis"></textarea>
+      </div>
+      <div class="form-group">
+          <label>treatment:</label>
+          <textarea class="form-control" name="treatment"></textarea>
+      </div>
+      <div class="form-group">
+          <label>interventions:</label>
+          <textarea class="form-control" name="interventions"></textarea>
+      </div>
+      <div class="form-group">
+          <label>plan_obsl:</label>
+          <textarea class="form-control" name="plan_obsl"></textarea>
+      </div>
+      <div class="form-group">
+          <label>plan_heal:</label>
+          <textarea class="form-control" name="plan_heal"></textarea>
+      </div>
+    <!-- Добавьте остальные поля модели здесь -->
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+</div>
+</body>
+</html>

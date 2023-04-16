@@ -42,7 +42,7 @@ public class PatientsController {
     }
 
     @PostMapping("/{id}")
-    public String update(@ModelAttribute("person") Patient patient,
+    public String update(@ModelAttribute("patient") Patient patient,
                          @PathVariable("id") int id) {
 
         patientsService.update(id, patient);
