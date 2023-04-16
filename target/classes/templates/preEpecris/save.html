@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Add First Look Details</title>
+  <!-- Подключаем Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+  <h1 class="mt-5 mb-3">Add First Look Details</h1>
+  <form action="#" th:action="@{/PreEpecris/add}" th:object="${preEpecris}" method="post">
+    <div class="form-group">
+      <label>ost_opht_stat:</label>
+      <input type="date" class="form-control" id="ost_opht_stat" name="ost_basis_dis">
+    </div>
+    <div class="form-group">
+      <label for="fl_Time">ost_basis_dis:</label>
+      <input type="time" class="form-control" id="fl_Time" name="ost_basis_dis">
+    </div>
+    <div class="form-group">
+      <label for="Complaints">ost_hard_dis:</label>
+      <textarea class="form-control" id="Complaints" rows="5" cols="50" name="ost_hard_dis">
+          Аллергологический анамнез – отрицает.
+Эпидемический анамнез: в течение последних 14 дней в эпидемически неблагополучных странах и регионах не был. Наличие близких контактов с больными или лицами, подозрительными на коронавирусную инфекцию COVID -19, контактов с лицами, находившимися под наблюдением в связи с подозрением на коронавирус и лицами, у которых подтвержден диагноз COVID- 19, отрицает.
+      </textarea>
+    </div>
+    <div class="form-group">
+      <label for="anamnesis_dis">ost_addit_inf:</label>
+      <textarea class="form-control" id="anamnesis_dis" name="ost_addit_inf"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="anamnesis_dis">ost_anam_dis:</label>
+      <textarea class="form-control" name="ost_anam_dis"></textarea>
+    </div>
+      <div class="form-group">
+          <label>blood_group</label>
+          <textarea class="form-control" name="blood_group"></textarea>
+      </div>
+      <div class="form-group">
+          <label>blood_resus:</label>
+          <textarea class="form-control" name="blood_resus"></textarea>
+      </div>
+      <div class="form-group">
+          <label>blood_stats:</label>
+          <textarea class="form-control" name="blood_stats"> код по МКБ   </textarea>
+      </div>
+      <div class="form-group">
+          <label>ost_with_dis:</label>
+          <textarea class="form-control" name="ost_with_dis"> код по МКБ    </textarea>
+      </div>
+      <div class="form-group">
+          <label>ost_allerg_anam:</label>
+          <textarea class="form-control" name="ost_allerg_anam">код по МКБ   </textarea>
+      </div>
+      <div class="form-group">
+          <label>operention_type:</label>
+          <textarea class="form-control" name="operention_type">код по МКБ</textarea>
+      </div>
+      <div class="form-group">
+          <label>operention_type:</label>
+          <textarea class="form-control" name="operention_type"></textarea>
+      </div>
+      <div class="anastesia">
+          <label>reason_dis:</label>
+          <textarea class="form-control" name="anastesia"></textarea>
+      </div>
+      <div class="form-group">
+          <label>Premedic:</label>
+          <textarea class="form-control" name="Premedic"></textarea>
+      </div>
+      <div class="form-group">
+          <label>obosnovanie:</label>
+          <textarea class="form-control" name="obosnovanie"></textarea>
+      </div>
+      <div class="form-group">
+          <label>riski:</label>
+          <textarea class="form-control" name="riski"></textarea>
+      </div>
+      <div class="form-group">
+          <label>uchitdobat:</label>
+          <textarea class="form-control" name="uchitdobat"></textarea>
+      </div>
+    <!-- Добавьте остальные поля модели здесь -->
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+</div>
+</body>
+</html>

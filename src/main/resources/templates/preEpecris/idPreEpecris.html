@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="box4">
+    <a th:text="${'Запись номер : ' + preEpecris.getPe_id()}"> </a>
+    <!--  <p th:text="${firstLook.getFl_id()}"></p>-->
+    <h1 th:text="${preEpecris.getPe_id()}"></h1>
+    <h1><a th:text="${preEpecris.getOst_opht_stat()}" ></a> </h1>
+    <!--    th:href="@{/patients/{id}(id=${patient.getId()})}"-->
+    <h1 th:text="${preEpecris.getOst_basis_dis()}"></h1>
+    <h1 th:text="${preEpecris.getOst_hard_dis()}"></h1>
+    <h1 th:text="${preEpecris.getOst_addit_inf()}"></h1>
+    <h1 th:text="${preEpecris.getOst_anam_dis()}"></h1>
+    <h1 th:text="${preEpecris.getBlood_group()}"></h1>
+    <h1 th:text="${preEpecris.getBlood_resus()}"></h1>
+    <h1 th:text="${preEpecris.getBlood_stats()}"></h1>
+    <h1 th:text="${preEpecris.getOst_with_dis()}"></h1>
+    <h1 th:text="${preEpecris.getOst_allerg_anam()}"></h1>
+    <h1 th:text="${preEpecris.getOperention_type()}"></h1>
+    <h1 th:text="${preEpecris.getEye_type()}"></h1>
+    <h1 th:text="${preEpecris.getAnastesia()}"></h1>
+    <h1 th:text="${preEpecris.getPremedic()}"></h1>
+    <h1 th:text="${preEpecris.getObosnovanie()}"></h1>
+    <h1 th:text="${preEpecris.getRiski()}"></h1>
+    <h1 th:text="${preEpecris.getUchitdobat()}"></h1>
+    <form th:method="DELETE" th:action="@{/PreEpecris/delete/{pe_id}(pe_id=${preEpecris.getPe_id()})}">
+        <input type="submit" value="Delete"/>
+    </form>
+    <a th:href="@{/PreEpecris/{pe_id}/edit(pe_id=${preEpecris.getPe_id()})}">Edit</a>
+</div>
+
+</body>
+</html>

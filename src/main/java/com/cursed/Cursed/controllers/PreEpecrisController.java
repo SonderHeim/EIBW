@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/ PreEpecris")
+@RequestMapping("/PreEpecris")
 public class PreEpecrisController {
     private final PreEpecrisService preEpecrisService;
 
@@ -35,7 +35,7 @@ public class PreEpecrisController {
     @PostMapping("/add")
     public String submitForm(@ModelAttribute("preEpecris") PreEpecris preEpecris) {
         preEpecrisService.save(preEpecris);
-        return "redirect:/preepecris";
+        return "redirect:/PreEpecris";
     }
 
     @GetMapping("/{pe_id}")
